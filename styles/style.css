@@ -13,6 +13,9 @@
     --logoColor : #061440;
     --focus-color : #f28c00;
 
+    /*Font size*/
+
+    --tittle-font-size : 3rem;
 }
 /* ===================Dark Mode variables=================== */
 
@@ -198,6 +201,9 @@ header{
     transition: .2s;
     transition-property: transform, opacity;
     z-index: 100;
+    box-shadow: 4px 14px 38px -24px rgba(0,0,0,0.729);
+    -webkit-box-shadow: 4px 14px 38px -24px rgba(0, 0, 0, 0.729);
+    -moz-box-shadow: 4px 14px 38px -24px rgba(0,0,0,0.729);
 }
 
 .menu-item:hover .menu-dropdown{
@@ -361,19 +367,32 @@ main{
   }
 
 /* ==========================Banner section======================= */
-section:nth-child(2){
+.dealContainer{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dealContainer h2{
+    color: var(--subtext-color);
+    font-size: var(--tittle-font-size);
+    text-align: center;
+}
+
+.dealContainer ul{
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     padding: 2rem;
-  }
+}
 
-section:nth-child(2) article img{
+.dealContainer ul li img{
     transition: all 0.3s;
 }
 
-  section:nth-child(2) article img:hover{
+.dealContainer ul li img:hover{
     transform: translateY(-0.5rem);
     border: 0.3rem solid var(--focus-color);
     box-shadow: -1px 13px 25px -11px rgba(0,0,0,0.75);
-  }
+}

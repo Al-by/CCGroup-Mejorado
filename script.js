@@ -11,8 +11,10 @@ $(document).ready(function(){
         $("body").toggleClass("darkMode");
         if($("body").hasClass("darkMode")){
             $darkModeIcon.removeClass("bxs-bulb").addClass("bx-bulb");
+            $("body").css("background-color", "#1f1f1f");
         } else {
             $darkModeIcon.removeClass("bx-bulb").addClass("bxs-bulb");
+            $("body").css("background-color", "white");
         }
     });
 });
